@@ -1,6 +1,1 @@
-.idea/
-.vscode/
-*.iml
-.tmp
-node_modules
-debug.log
+.idea

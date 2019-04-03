@@ -1,0 +1,21 @@
+#board {
+    width: 900px;
+    height: 400px;
+    position: relative;
+    background: aliceblue;
+}
+
+#rectangle {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: darkred;
+}
+
+#ball {
+    background: #090909;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+}
