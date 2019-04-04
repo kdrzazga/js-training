@@ -1,8 +1,6 @@
-export default class Person {
-    constructor(firstName, lastName, accounts) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.accounts = accounts;
+export default class Board {
+    constructor(ball) {
+        this.ball = ball;
     };
 
     addAccount(account) {
@@ -10,7 +8,7 @@ export default class Person {
     };
 
     sayHello() {
-        return `Hi, my name is ${this.firstName} ${this.lastName} and I have ${this.accounts.length} bank account(s) with total balance ${this._calculateBalance()}`;
+        return `Hi, my name is  and I have ${this.ball} bank account(s) with total balance ${this._calculateBalance()}`;
     };
 
     filterPositiveAccounts() {

@@ -1,18 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Person from './person';
-import Account from './account';
+import Board from './board';
+import Ball from './ball';
 
-const person = new Person('John', 'Example', [new Account(1500, 'EUR', 1), new Account(-2500, 'EUR', 2)]);
+const board = new Board(new Ball(10, 10));
 
-window.atm = (() => {
-    // add person name
-    document.querySelector('.card-title').innerHTML = `${person.firstName} ${person.lastName}`;
+window.ball = (() => {
+    // add board name
+    document.querySelector('.card-title').innerHTML = ` BALL `;
 
-    // list person accounts
+    // list board accounts
     const card = document.querySelector('.card-body');
 
-    for (let account of person.accounts) {
+    for (let account of board.ball) {
         const paragraph = document.createElement('p');
         const paragraphText = document.createTextNode(`Account Number: ${account.number}, Balance: `);
 
@@ -27,21 +27,13 @@ window.atm = (() => {
         card.appendChild(paragraph);
     }
 
-    // progress bar handling
-    const container = document.querySelector('.container');
-    const progress = document.querySelector('.progress');
-    const button = document.querySelector('button');
-    container.addEventListener('myEvent', (e) => {
-        progress.hidden = !e.detail.showProgress;
-    });
-
     return {
         withdrawMoney: function () {
             const number = +document.querySelector('#number').value;
             const amount = +document.querySelector('#amount').value;
 
             const event = new CustomEvent('myEvent', {
-                detail: { showProgress: true },
+                detail: {showProgress: true},
                 bubbles: true
             });
 
@@ -51,7 +43,7 @@ window.atm = (() => {
             if (number && amount) {
                 event.detail.showProgress = false;
 
-                person.withdraw(number, amount).then(() => {
+                board.withdraw(number, amount).then(() => {
                     document.querySelector(`span#account${number}`).innerHTML = +document.querySelector(`span#account${number}`).innerHTML - amount;
 
                     button.dispatchEvent(event);
