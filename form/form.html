@@ -1,24 +1,40 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body class="site" onload="fillControlsWithData()">
 
 <p>Enter names in the fields, then click "Submit" to submit the form:</p>
 
 <form id="frm1">
-    <label>
-        First name:
-        <input type="text" name="fname">
-    </label><br>
-    Last name: <input type="text" name="lname"><br><br>
-    <input type="button" onclick="myFunction()" value="Submit">
+    <table>
+        <tr>
+            <td class="textbox" colspan="2"><select id="person_id" class="id"></select></td>
+        </tr>
+        <tr>
+            <td class="label" id="0"> First name:</td>
+            <td class="textbox" id="1"><input type="text" id="fname"/></td>
+        </tr>
+        <tr>
+            <td class="label" id="2"> Last name:</td>
+            <td class="textbox" id="3"><input type="text" id="lname"/></td>
+        </tr>
+        <tr>
+            <td class="label" id="4"> Nationality:</td>
+            <td class="textbox" id="5"><select id="nationalities" class="textbox"></select></td>
+        </tr>
+        <tr>
+            <td class="submit" colspan="2"><input type="button" onclick="processForm()" value="Submit"></td>
+        </tr>
+    </table>
 </form>
 
-<script>
-    function myFunction() {
-        document.getElementById("frm1").submit();
-        console.log("submitted");
-    }
-</script>
+<script type="text/javascript" src="form.js"></script>
+<script type="text/javascript" src="class-def.js"></script>
+<script type="text/javascript" src="data-provider.js"></script>
 
 </body>
 </html>
