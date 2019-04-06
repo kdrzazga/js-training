@@ -10,7 +10,7 @@ const winCombos = [
     [2, 5, 8],
     [0, 4, 8],
     [6, 4, 2]
-]
+];
 
 const cells = document.querySelectorAll('.cell');
 
@@ -100,6 +100,4 @@ function turnClick(square) {
 
         if (!checkTie()) turn(bestSpot(), aiPlayer);
     }
-
-
 }

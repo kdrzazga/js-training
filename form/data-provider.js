@@ -8,3 +8,25 @@ function readPeople(){
         new Person(2, 'Zbyszek', 'Novak')
     ];
 }
+
+function loadDoc() {
+    alert('loading');
+    const url = "http://localhost:8083/countries";
+    var xhttp = new XMLHttpRequest();
+
+    //xttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            alert(this.responseText);
+        }
+        else{
+            alert("readyState = " + this.readyState
+                + ", status " + this.status);
+        }
+    };
+
+    var x = new Number(7);
+    xhttp.open("GET", url, true);
+    xhttp.send(null);
+}
