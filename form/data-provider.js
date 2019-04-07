@@ -12,7 +12,7 @@ function readPeople(){
 function loadDoc() {
     alert('loading');
     const url = "http://localhost:8083/countries";
-    var xhttp = new XMLHttpRequest();
+    const xhttp = new XMLHttpRequest();
 
     //xttp.setRequestHeader("Access-Control-Allow-Origin", "*");
 
@@ -26,7 +26,7 @@ function loadDoc() {
         }
     };
 
-    var x = new Number(7);
+    const x = new Number(7);
     xhttp.open("GET", url, true);
     xhttp.send(null);
 }

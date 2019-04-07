@@ -9,7 +9,7 @@ class MyDate extends Date {
     }
 
     getFormattedDate() {
-        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
             'Oct', 'Nov', 'Dec'];
         return this.getDate() + '-' + months[this.getMonth()] + '-' +
             this.getFullYear();
@@ -17,7 +17,7 @@ class MyDate extends Date {
 }
 
 function myDateDemo1() {
-    var aDate = new MyDate();
+    const aDate = new MyDate();
     aDate.logger.value += aDate.getTime();
     aDate.logger.value += aDate.getFormattedDate();
 }
@@ -33,7 +33,7 @@ class ExtendedUint8Array extends Uint8Array {
 }
 
 function ExtendedUint8ArrayDemo() {
-    var eua = new ExtendedUint8Array();
+    const eua = new ExtendedUint8Array();
     eua.logger += eua.byteLength;
 }
 
@@ -55,7 +55,7 @@ class MyAudio extends Audio {
 }
 
 function MyAudioDemo() {
-    var player = new MyAudio();
+    const player = new MyAudio();
     player.controls = true;
     player.lyrics = 'Never gonna give you up';
     document.querySelector('body').appendChild(player);
@@ -77,7 +77,7 @@ class Stack extends Array {
 }
 
 function myDateDemo2() {
-    var stack = new Stack();
+    const stack = new Stack();
     stack.push('world');
     stack.push('hello');
     stack.logger.value += stack.top();

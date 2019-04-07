@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script type="application/javascript" src="js/animation.js"></script>
 </head>
 <body onload="animate();">
@@ -15,18 +15,18 @@
     <div class="form">
         <div>
             <label>Principal:</label>
-            <input type="text" id="principal" value="200000"/>
+            <label for="principal"></label><input type="text" id="principal" value="200000"/>
         </div>
         <div>
             <label>Years:</label>
-            <input type="text" id="years" value="30"/>
+            <label for="years"></label><input type="text" id="years" value="30"/>
         </div>
         <div>
-            <label htmlFor="rate">Rate:</label>
-            <input type="text" id="rate" value="5.0"/>
+            <label>Rate:</label>
+            <label for="rate"></label><input type="text" id="rate" value="5.0"/>
         </div>
         <div>
-            <label htmlFor="calcBtn"></label>
+            <label></label>
             <button id="calcBtn">Calculate</button>
         </div>
     </div>

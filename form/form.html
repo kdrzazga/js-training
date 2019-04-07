@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head title="Classes ES6 Demo">
+<head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css"/>
+    <title>Classes ES6 Demo</title>
 </head>
 
 <body class="site" onload="fillControlsWithData()">
@@ -12,19 +13,19 @@
 <form id="personal-form">
     <table>
         <tr>
-            <td class="textbox" colspan="2"><select id="person_id" class="id"></select></td>
+            <td class="textbox" colspan="2"><label for="person_id"></label><select id="person_id" class="id"></select></td>
         </tr>
         <tr>
             <td class="label" id="0"> First name:</td>
-            <td class="textbox" id="1"><input type="text" id="fname"/></td>
+            <td class="textbox" id="1"><label for="fname"></label><input type="text" id="fname"/></td>
         </tr>
         <tr>
             <td class="label" id="2"> Last name:</td>
-            <td class="textbox" id="3"><input type="text" id="lname"/></td>
+            <td class="textbox" id="3"><label for="lname"></label><input type="text" id="lname"/></td>
         </tr>
         <tr>
             <td class="label" id="4"> Nationality:</td>
-            <td class="textbox" id="5"><select id="nationalities" class="textbox"></select></td>
+            <td class="textbox" id="5"><label for="nationalities"></label><select id="nationalities" class="textbox"></select></td>
         </tr>
         <tr>
             <td class="submit" colspan="2"><input type="button" onclick="processForm()" value="Submit"></td>

@@ -4,7 +4,7 @@ class Account {
         this.currency = currency;
         this.number = number;
     };
-};
+}
 
 class Person {
     constructor(firstName, lastName, accounts) {
@@ -57,4 +57,4 @@ class Person {
 
         return totalBalance;
     };
-};
+}

@@ -26,7 +26,7 @@ class Square extends Polygon {
         return this.height * this.width;
     }
 
-    set area(value) {
+    setArea(value) {
         this.area = value;
     }
 }

@@ -20,7 +20,7 @@ function startGame() {
     document.querySelector(".endgame").style.display = "none";
     origBoard = Array.from(Array(9).keys());
 
-    for (var i = 0; i < cells.length; i++) {
+    for (let i = 0; i < cells.length; i++) {
         cells[i].innerText = '';
         cells[i].style.removeProperty('background-color');
         cells[i].addEventListener('click', turnClick, false);
@@ -49,7 +49,7 @@ function gameOver(gameWon) {
             gameWon.player == humanPlayer ? "blue" : "red";
     }
 
-    for (var i = 0; i < cells.length; i++) {
+    for (let i = 0; i < cells.length; i++) {
         cells[i].removeEventListener('click', turnClick, false)
     }
 
@@ -70,8 +70,6 @@ function emptySquares() {
 
 function bestSpot() {
     return emptySquares()[0];
-
-    return undefined;
 }
 
 function declareWinner(who) {
@@ -81,7 +79,7 @@ function declareWinner(who) {
 
 function checkTie() {
     if (emptySquares().length == 0) {
-        for (var i = 0; i < cells.length; i++) {
+        for (let i = 0; i < cells.length; i++) {
             cells[i].style.backgroundColor = "green";
             cells[i].removeEventListener('click', turnClick, false);
 
@@ -94,7 +92,7 @@ function checkTie() {
 }
 
 function turnClick(square) {
-    var nobodyClickedSquare = typeof origBoard[square.target.id] == 'number';
+    const nobodyClickedSquare = typeof origBoard[square.target.id] == 'number';
     if (nobodyClickedSquare) {
         turn(square.target.id, humanPlayer)
 
