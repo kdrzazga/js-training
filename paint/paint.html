@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paint</title>
+    <link rel="stylesheet" type="text/css" href="paint.css">
+</head>
+
+<body onload="init();">
+<table id="main">
+    <tr>
+        <td id="menu" rowspan="2">
+            <table>
+                <tr>
+                    <td id = "menu-header" colspan="2">
+                        MENU
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" id="new" value="NEW"/>
+                    </td>
+                    <td>
+                        <input type="button" id="line" value="LINE"/>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <div id="board" onmousemove="getMousePos(event)" onmouseout="stopTrackingMouse()"
+                 onmousedown="setClicked()" onmouseup="resetClicked()"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div id="displayArea"></div>
+        </td>
+    </tr>
+</table>
+
+<script src="../common/lib.js"></script>
+<script src="paint.js"></script>
+</body>
+</html>

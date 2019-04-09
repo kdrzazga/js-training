@@ -1,0 +1,33 @@
+#table{
+    border-width: medium;
+}
+
+#board {
+    width: 900px;
+    height: 400px;
+    position: relative;
+    background: aliceblue;
+}
+
+#displayArea{
+    font-family: "Comic Sans MS", cursive;
+    font-size: xx-small;
+}
+
+#menu{
+    vertical-align: top;
+    font-family: "Comic Sans MS", cursive;
+    font-size: small;
+}
+
+#menu-header {
+    vertical-align: top;
+    font-family: "Comic Sans MS", cursive;
+    font-size: small;
+}
+
+#input{
+    vertical-align: top;
+    font-family: "Arial Narrow";
+    font-size: xx-small;
+}

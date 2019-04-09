@@ -19,3 +19,8 @@
     position: absolute;
     border-radius: 50%;
 }
+
+#displayArea{
+    font-family: "Comic Sans MS", cursive;
+    font-size: xx-small;
+}
