@@ -4,7 +4,7 @@ function animatePong(board) {
     const id = setInterval(frame, 5);
 
     function frame() {
-        if (pos == board.sizeX) {
+        if (pos === board.sizeX) {
             clearInterval(id);
         } else {
             board.moveBall(true);
@@ -21,7 +21,7 @@ function animatePong(board) {
 }
 
 function drawBoard(board) {
-    const boardSymbol = document.getElementById("board")
+    const boardSymbol = document.getElementById("board");
     boardSymbol.style.width = board.sizeX;
     boardSymbol.style.height = board.sizeY;
 }

@@ -12,16 +12,14 @@ function init() {
 
 }
 
-function draw(){
+function draw(event) {
 
-    if (clicked){
-        let canvas = document.getElementById("board");
-        let ctx = canvas.getContext('2d');
-        ctx.font = '30px Cursive';
-        ctx.fillText("Hello world!", 50, 50);
-        ctx.fillRect(10, 10, 40, 45);
-
-
-
-    }
+    // if (clicked){
+    let canvas = document.getElementById("board");
+    let ctx = canvas.getContext('2d');
+    ctx.font = '30px Cursive';
+    ctx.fillText("Hello world!", 50, 50);
+    ctx.fillRect(10, 10, 40, 45);
+    canvas.update();
+    //}
 }
