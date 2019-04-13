@@ -17,7 +17,7 @@ function loadDoc() {
     //xttp.setRequestHeader("Access-Control-Allow-Origin", "*");
 
     xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             alert(this.responseText);
         }
         else{
@@ -26,7 +26,7 @@ function loadDoc() {
         }
     };
 
-    const x = new Number(7);
+    const x = Number(7);
     xhttp.open("GET", url, true);
     xhttp.send(null);
 }

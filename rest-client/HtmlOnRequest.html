@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Get Request Test</title>
+</head>
+
+<body>
+<div style="text-align: center;">JS Get Request Test</div>
+<p/>
+
+<div id="getDiv">
+    <p>http://api.ipinfodb.com<br/>
+    Sending request with GET</p>
+    <input id="sendGet" type="button" onclick="sendGetRequest()" value="Send GET request"/>
+</div>
+<p/>
+<p/>
+<p/>
+<div id="postDiv">
+    <p>Sending same request with POST and empty body</p>
+    <input id="sendPost" type="button" onclick="sendPostRequest()" value="Send POST request"/>
+</div>
+<p/>
+<p/>
+<p/>
+<div id="post2Div">
+    <p>https://httpbin.org/post<br/>
+        Sending request with POST</p>
+    <input id="sendPost2" type="button" onclick="sendPostRequestToHttpBin()" value="Send POST request"/>
+</div>
+
+<script type="application/javascript" src="ipinfodb-request.js"></script>
+<script type="application/javascript" src="httpbin-request.js"></script>
+</body>
+</html>

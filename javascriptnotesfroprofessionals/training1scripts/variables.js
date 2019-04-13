@@ -49,11 +49,11 @@ function differentArrays() {
 }
 
 function equalInTypeAndValue() {
-    var doubleEqual = 77 == '77';
-    var tripleEqual = 77 === '77';
+    const doubleEqual = 77 === '77';
+    const tripleEqual = 77 === '77';
 
-    var null2EqUndefined = null == undefined;
-    var null3EqUndefined = null === undefined;
+    const null2EqUndefined = null == undefined;
+    const null3EqUndefined = null === undefined;
 
     alert("77 == '77' is " + doubleEqual);
     alert("77 === '77' is " + tripleEqual);
@@ -104,7 +104,7 @@ function testingInfinity() {
     console.log("1 / -0" + -Infinity);
     console.log("1 / 0 === 1 / -0 ",  1 / 0 === 1 / -0); // false
     console.log("Infinity + Infinity; " + Infinity + Infinity); // Infinity
-    var a = 0, b = -0;
+    const a = 0, b = -0;
     console.log("a === b; " + a === b); // true
     console.log("1 / a === 1 / b " + 1 / a === 1 / b); // false
 }

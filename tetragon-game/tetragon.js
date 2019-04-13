@@ -57,14 +57,6 @@ function getBackground(id) {
     return cell.style.backgroundColor;
 }
 
-function nextTurn() {
-    if (currentTurn === SIDE.BLUE) {
-        currentTurn = SIDE.RED;
-    } else {
-        currentTurn = SIDE.BLUE;
-    }
-}
-
 function clearSelectedCell() {
     if (selectedCellId != null) {
 
@@ -87,4 +79,19 @@ function getSelectionColor(side) {
     if (side === SIDE.BLUE)
         return blueSelectionColor;
     else return redSelectionColor;
+}
+
+function nextTurn() {
+    if (currentTurn === SIDE.BLUE) {
+        currentTurn = SIDE.RED;
+    } else {
+        currentTurn = SIDE.BLUE;
+    }
+}
+
+function distance(cell1Id, cell2Id){
+    const x1 = cell1Id.split(",")[0];
+    const y1 = cell1Id.split(",")[1];
+    const x2 = cell2Id.split(",")[0];
+    const y2 = cell2Id.split(",")[1];
 }

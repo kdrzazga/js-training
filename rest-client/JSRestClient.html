@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Http Request to REST Server</title>
+</head>
+<body>
+
+Start Spring Boot application from https://github.com/kdrzazga/spring-hibernate-tutorials<br/>
+branch: develop<br/>
+project: spring-boot-rest<br/>
+<div id="getDiv">
+    Sending request with GET<p/>
+    <input id="sendGet" type="button" onclick="sendGetRequest()" value="Send GET Countries Request"/>
+    <p/>
+</div>
+
+<div id="postDiv">
+    Sending request with POST<p/>
+    &emsp;{<br>
+    &emsp;&emsp;&emsp;"word" : "<label for="word-value"></label><input id = "word-value" type="text" value="pneumonoultramicroscopicsilicovolcanoconiosis" width="800px">";<br/>
+    &emsp;}<p/>
+    <input id="sendPost" type="button" onclick="sendPostRequest()" value="Send POST Request"/>
+
+</div>
+<p/><p/>
+<div>
+    <p>Response code:&emsp;<response id="responseCode"></response>
+    </p>
+    <textarea rows="5" cols="60" id="responseBlock"></textarea>
+</div>
+
+<script type="application/javascript" src="countries-request.js"></script>
+</body>
+</html>

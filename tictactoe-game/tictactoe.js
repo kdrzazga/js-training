@@ -1,4 +1,4 @@
-var origBoard;
+let origBoard;
 const humanPlayer = '0';
 const aiPlayer = 'X';
 const winCombos = [
@@ -46,14 +46,14 @@ function checkWin(board, player) {
 function gameOver(gameWon) {
     for (let index  of winCombos[gameWon.index]) {
         document.getElementById(index).style.backgroundColor =
-            gameWon.player == humanPlayer ? "blue" : "red";
+            gameWon.player === humanPlayer ? "blue" : "red";
     }
 
     for (let i = 0; i < cells.length; i++) {
         cells[i].removeEventListener('click', turnClick, false)
     }
 
-    declareWinner(gameWon.player == humanPlayer ? "You win!" : "You lose")
+    declareWinner(gameWon.player === humanPlayer ? "You win!" : "You lose")
 }
 
 function turn(id, player) {
@@ -78,7 +78,7 @@ function declareWinner(who) {
 }
 
 function checkTie() {
-    if (emptySquares().length == 0) {
+    if (emptySquares().length === 0) {
         for (let i = 0; i < cells.length; i++) {
             cells[i].style.backgroundColor = "green";
             cells[i].removeEventListener('click', turnClick, false);
@@ -94,7 +94,7 @@ function checkTie() {
 function turnClick(square) {
     const nobodyClickedSquare = typeof origBoard[square.target.id] == 'number';
     if (nobodyClickedSquare) {
-        turn(square.target.id, humanPlayer)
+        turn(square.target.id, humanPlayer);
 
         if (!checkTie()) turn(bestSpot(), aiPlayer);
     }

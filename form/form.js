@@ -1,8 +1,8 @@
-var nationalityComboBox = document.getElementById("nationalities");
-var firstNameTextbox = document.getElementById("fname");
-var lastNameTextbox = document.getElementById("lname");
-var idComboBox = document.getElementById("person_id");
-var people;
+const nationalityComboBox = document.getElementById("nationalities");
+const firstNameTextbox = document.getElementById("fname");
+const lastNameTextbox = document.getElementById("lname");
+const idComboBox = document.getElementById("person_id");
+let people;
 
 function processForm() {
     document.getElementById("personal-form").submit();
@@ -14,7 +14,8 @@ function processForm() {
 function fillControlsWithData() {
     people = readPeople();
     readNationalities().forEach(function (nationality) {
-        nationalityComboBox.innerHTML += "<option value=\"" + nationality + "\">" + nationality + "</option>";
+        nationalityComboBox.options.appendData(nationality);
+        //nationalityComboBox.innerHTML += "<option value=\"" + nationality + "\">" + nationality + "</option>";
     });
 
     people.forEach(function (person) {
@@ -30,7 +31,7 @@ function fillControlsWithData() {
 }
 
 function updatePersonTextboxes() {
-    const id = new Number(idComboBox.options[idComboBox.selectedIndex].text) - 1;
+    const id = Number(idComboBox.options[idComboBox.selectedIndex].text) - 1;
 
     if (id < people.length) {
         firstNameTextbox.value = people[id].firstName;

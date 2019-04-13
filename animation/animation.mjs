@@ -16,7 +16,7 @@ function animate() {
     const id = setInterval(frame, 5);
 
     function frame() {
-        if (pos == 350) {
+        if (pos === 350) {
             clearInterval(id);
         } else {
             //window.board.moveBall();

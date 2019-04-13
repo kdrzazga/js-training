@@ -63,11 +63,7 @@ const atm = (() => {
             const number = +document.querySelector('#number').value;
             const amount = +document.querySelector('#amount').value;
 
-            if (number > 0 && amount > 0) {
-                button.disabled = false;
-            } else {
-                button.disabled = true;
-            }
+            button.disabled = !(number > 0 && amount > 0);
         }
     }
 })();
