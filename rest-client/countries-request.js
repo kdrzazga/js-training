@@ -12,7 +12,9 @@ function sendGetRequest() {
         }
     };
 
+
     xhttp.open("GET", "http://localhost:8083/response-entity-builder-with-http-headers", true);
+    xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
     xhttp.send(null);
 }
 
@@ -29,7 +31,9 @@ function sendPostRequest() {
         }
     };
 
+
     xhttp.open("POST", "http://localhost:8083/simplePost", true);
+    xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
     xhttp.send(requestJson);
 }
 

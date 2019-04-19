@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery</title>
+</head>
+<body>
+<div id="info">
+    <p id="paragraph1">Paragraph 1: Query greatly simplifies JavaScript programming.</p>
+    <p id="paragraph2">Paragraph 2: The jQuery library contains the following features:
+    <ul>
+        <li>HTML/DOM manipulation</li>
+        <li>CSS manipulation</li>
+        <li>HTML event methods</li>
+        <li>Effects and animations</li>
+        <li>AJAX</li>
+        <li>Utilities</li>
+    </ul>
+    </p>
+</div>
+<hr>
+<div id = "controls">
+    <input type="button" value="Hide all <p> elements" onclick="$('p').hide();">
+    <input type="button" value="Hide all <li> elements" onclick="$('li').hide()">
+    <input type="button" value="Hide Paragraph 1" onclick=" $('#paragraph1').hide();">
+    <input type="button" value="Reset" onclick="">
+</div>
+
+<script src="jquery-3.4.0.min.js"></script>
+</body>
+</html>
