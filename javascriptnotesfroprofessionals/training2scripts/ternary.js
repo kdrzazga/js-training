@@ -19,7 +19,7 @@ function keyPrototypeDifference() {
 
     Foo.style = 'bold';
 
-    var foo = new Foo();
+    const foo = new Foo();
     console.log(Foo.style); // 'bold'
     console.log(foo.style); // undefined
 

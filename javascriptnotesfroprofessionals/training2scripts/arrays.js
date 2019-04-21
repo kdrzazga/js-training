@@ -1,19 +1,19 @@
-var realArray = ['a', 'b', 'c'];
+let realArray = ['a', 'b', 'c'];
 
-var arrayLike = {
+const arrayLike = {
     0: 'a',
     1: 'b',
     2: 'c',
     length: 3
 };
 
-var arrayLike2 = {
+const arrayLike2 = {
     0: 'Value 0',
     1: 'Value 1',
     length: 2
 };
 
-var realArray = Array.prototype.slice.call(arrayLike2);
+const realArray2 = Array.prototype.slice.call(arrayLike2);
 realArray = [].slice.call(arrayLike2); // Shorter version
 
 function sumArray() {

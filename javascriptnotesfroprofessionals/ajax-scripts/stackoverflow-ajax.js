@@ -22,10 +22,7 @@ function getOnFulfilled() {
 
 function getOnRejected() {
     return error => {
-        const message = document.createElement('pre');
-        document.body.appendChild(message);
-        message.style.color = 'red';
-        message.textContent = String(error);
+        logError(error);
     };
 }
 
@@ -36,8 +33,11 @@ function getStackExchangeTopJSQuestions() {
         '&tagged=javascript&sort=month&filter=unsafe&key='
         + seKey;
 
+    log("Sending request: " + url);
+
     fetch(url)
         .then(response => response.json())
         .then(getOnFulfilled())
         .then(null, getOnRejected());
 }
+
